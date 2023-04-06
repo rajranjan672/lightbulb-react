@@ -1,6 +1,6 @@
 import Home from '../pages/Home'
 import ReadMore from '../pages/ReadMore'
-import Profile from '../pages/Profile'
+import Profile from '../components/Profile'
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 

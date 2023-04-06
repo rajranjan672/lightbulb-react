@@ -50,6 +50,8 @@ const NavBar = () => {
               <Nav.Link href="/community" className={activeLink === 'community' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('community')}>Community</Nav.Link>
               <Nav.Link href="/explore" className={activeLink === 'explore' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('explore')}>Explore</Nav.Link>
               <Nav.Link href="/help" className={activeLink === 'help' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('help')}>help</Nav.Link>
+              <Nav.Link href="/profile" className={activeLink === 'profile' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('profile')}>profile</Nav.Link>
+
             </Nav>
 
             <span className="navbar-text">
