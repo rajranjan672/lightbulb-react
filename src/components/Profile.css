@@ -1,0 +1,38 @@
+.headimg{
+    margin-left: 40%;
+    margin-top: 40px;
+
+}
+
+.foxyboy{
+    margin-left: 43%;
+}
+.headcontent{
+    margin-left: 170px;
+    margin-right: 135px;
+    text-align:center;
+}
+
+.tabs{
+    display: flex !important;
+}
+
+.tabs h3 {
+    margin-left: 20%;
+}
+
+.penguine{
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: justify;  
+    display: inline-block; 
+}
+
+.peng_title{
+    margin-top: 0 !important;
+
+}
+
+.cardss{
+    display: flex;
+}
