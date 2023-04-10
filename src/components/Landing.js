@@ -12,6 +12,7 @@ import axios from "axios";
 import Ideas from "./Ideas";
 import "../components/Landing.css";
 import "../App.css"
+import { Paper } from "@mui/material";
 
 const Landing = () => {
   const [ideas, setIdeas] = useState([]);
@@ -37,14 +38,13 @@ const Landing = () => {
       position="fixed"
       top={0}
       right={0}
-      left={0}
+      // left={0}
       zIndex={1}
       p="5"
       bg={`mode.${colorMode}.header`}
       justify="space-between"
       align="center"
     >
-      <Text mx={8} fontSize="3xl" fontWeight="bold">liteBulb</Text>
       <Flex>
         <Button
           size="md"
@@ -76,6 +76,7 @@ const Landing = () => {
         </Modal>
       </Flex>
     </Flex>
+    <Text mx={8} fontSize="3xl" fontWeight="bold">liteBulb</Text>
 
     <Divider />
 
@@ -91,18 +92,6 @@ const Landing = () => {
       <Image mt="44" ml='96' src="rocket.svg" alt="Rocket Illustration" boxSize="lg" />
     </Flex>
 
-
-    <div className="hero">
-      <h1 className="explore">Explore <br /> <span className="startup">startup Ideas</span> </h1>
-      <h1></h1>
-      <div className="landing-button">
-        <span className="add-yours-btn">add yours</span>
-      </div>
-      <div className="explore-button">
-        <span>explore ideas</span>
-      </div>
-      
-    </div>
     
     <div className="featured">Featured Ideas</div>
     
@@ -119,11 +108,21 @@ const Landing = () => {
       }).map((idea) => {
         return(
           <div className="cards" key={idea.id} >
+                       <Paper
+           elevation={4}
+             sx={{
+               ml: 5,
+               width: 323,
+               height: 350,
+             }}
+           >
           <span>{idea.title}</span>
           <p>{idea.description}</p>
           <div className="build-btn">Build</div>
           <div className="vouch-btn">Vouch</div>
     
+           </Paper>
+          
         </div>
       )})}
     {/* // <div className="cards">
