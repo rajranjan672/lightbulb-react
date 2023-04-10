@@ -89,13 +89,28 @@
 // }
 
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import axios from "axios";
 
 
 function Profile() {
   const [key, setKey] = useState('home');
+
+  const [vouch, setVouch] = useState([]);
+
+  
+  useEffect(() => {
+    getVouched()
+  }, [])
+  
+  const getVouched = async() => {
+
+  const res = await axios.get(`http://localhost:8080/api/vouches/vouched-ideas`);
+        setVouch(res.data)
+        console.log(res.data)
+  }
 
   return (
 <>
@@ -133,30 +148,33 @@ function Profile() {
       className="mb-3"
     >
       <Tab eventKey="home" title="vouched">
+      {vouch.map((vouc) =>{
+return (
       <div className="cardss">
-           <Paper
+      
+           <Paper  key={vouc.id}
            elevation={4}
              sx={{
                ml: 5,
                width: 323,
-               height: "auto",
+               height: 200,
              }}
            >
              <img className="penguine" src={penguine} />
              <span className="peng_title">
-               <h4>A plarform for token gated scheduled booking.</h4>
-             </span>
-             <p>
-               Admittedly, it is a surrogate experience, but so are love stories
-               and travel novels. It is artificial, but not vulgar. And more
-               importantly, it substantially changes Read more artificial, but
-               not vulgar. And more importantly, it substantially changes ...
-               Read more
+             <h4>{vouc.userID}</h4>
+           </span>
+           <p>
+               {vouc.ideaID}
              </p>
+          
+
+            
+            
            </Paper>
 
-          
-           <Paper
+
+           {/* <Paper
            elevation={4}
              sx={{
                ml: 5,
@@ -164,6 +182,7 @@ function Profile() {
                height: "auto",
              }}
            >
+            
              <img className="penguine" src={penguine} />
              <span className="peng_title">
               <h4>A plarform for token gated scheduled booking.</h4>
@@ -175,8 +194,10 @@ function Profile() {
                not vulgar. And more importantly, it substantially changes ...
                Read more
              </p>
-           </Paper>
-           </div>
+           </Paper> */}
+           </div>)
+           })}
+           
       </Tab>
       <Tab eventKey="profile" title="Created">
         

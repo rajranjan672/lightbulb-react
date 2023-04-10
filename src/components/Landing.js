@@ -25,11 +25,12 @@ const Landing = () => {
 
   useEffect(() => {
     getideas()
-  })
+  }, [])
   const getideas = async() => {
 
   const res = await axios.get(`http://localhost:8080/api/ideas/get-all`);
         setIdeas(res.data)
+        console.log('ideas',res.data)
   }
   return (
     <>

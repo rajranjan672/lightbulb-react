@@ -34,7 +34,9 @@
 }
 
 .cardss{
-    display: flex;
+    position: relative;
+    margin-left: 20px;
+    display: inline-block;
 }
 
 .MuiTab-textColorPrimary.Mui-selected {
