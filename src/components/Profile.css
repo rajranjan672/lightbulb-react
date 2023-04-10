@@ -36,3 +36,7 @@
 .cardss{
     display: flex;
 }
+
+.MuiTab-textColorPrimary.Mui-selected {
+    color: var(--darkGreen) !important;
+  }
