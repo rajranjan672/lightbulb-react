@@ -13,6 +13,7 @@ import Ideas from "./Ideas";
 import "../components/Landing.css";
 import "../App.css"
 import { Paper } from "@mui/material";
+import imgg from "../assets/img/Cactus 2 by Streamlinehq.png"
 
 const Landing = () => {
   const [ideas, setIdeas] = useState([]);
@@ -117,7 +118,8 @@ const Landing = () => {
                height: 350,
              }}
            >
-          <span>{idea.title}</span>
+            <img src={imgg} />
+          <h2>{idea.title}</h2>
           <p>{idea.description}</p>
           <div className="build-btn">Build</div>
           <div className="vouch-btn">Vouch</div>

@@ -157,13 +157,15 @@ return (
              sx={{
                ml: 5,
                width: 323,
-               height: 200,
+               height: 250,
              }}
            >
+            <div className="heading1">
              <img className="penguine" src={penguine} />
              <span className="peng_title">
              <h4>{vouc.userID}</h4>
            </span>
+           </div>
            <p>
                {vouc.ideaID}
              </p>
