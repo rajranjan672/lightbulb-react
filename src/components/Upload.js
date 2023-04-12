@@ -1,7 +1,7 @@
 import './Upload.css';
 
-// import DropFileInput from './components/drop-file-input/DropFileInput';
-// import DropFileInput from '../components/DropFileInput';
+//  import DropFileInput from './components/drop-file-input/DropFileInput';
+ import DropFileInput from '../components/DropFileInput';
 import FormFIelds from "../components/FormFields"
 function Upload() {
 
@@ -17,9 +17,9 @@ function Upload() {
             </h2>
             <div><FormFIelds /></div>
             
-            {/* <DropFileInput
+            <DropFileInput
                 onFileChange={(files) => onFileChange(files)}
-            /> */}
+            /> 
         </div>
     );
 }

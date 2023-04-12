@@ -14,6 +14,7 @@ import "../components/Landing.css";
 import "../App.css"
 import { Paper } from "@mui/material";
 import imgg from "../assets/img/Cactus 2 by Streamlinehq.png"
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 const Landing = () => {
   const [ideas, setIdeas] = useState([]);
@@ -122,7 +123,11 @@ const Landing = () => {
           <h2>{idea.title}</h2>
           <p>{idea.description}</p>
           <div className="build-btn">Build</div>
-          <div className="vouch-btn">Vouch</div>
+          <div className="vouch-btn">Vouch
+          <span>
+            <ThumbUpIcon />
+          </span>
+          </div>
     
            </Paper>
           
